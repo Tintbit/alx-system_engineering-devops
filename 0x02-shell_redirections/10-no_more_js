@@ -1,2 +1,2 @@
 #!/bin/bash
-find ./ -type f -iname "*.js" -exec rm "{}" \;10-no_more_js
+find ./ -type f -iname "*.js" -exec rm "{}" \;
