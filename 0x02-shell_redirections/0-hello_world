@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -n "Hellow, World"
+echo -ne "Hellow, World\n"
