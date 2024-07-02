@@ -1,5 +1,5 @@
 # this manifest file used to get flask via pip3
 package { 'flask':
-  enusre   => present,
+  enusre   => 2.1.0,
   provider => pip3,
   }
