@@ -1,0 +1,7 @@
+#! /usr/bin/env bash  
+# /usr/bin/env is  more secure than #!/bin/bash
+
+while [[ true ]]
+do
+    sleep 2
+done
