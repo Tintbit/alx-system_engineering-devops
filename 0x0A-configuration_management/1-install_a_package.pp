@@ -19,13 +19,9 @@
 #  unless  => '/usr/local/bin/pip3 --version',
 #  }
 #
-## Install Flask
-#package { 'flask==2.1.0':
-#  ensure   => present,
-#  provider => pip,
-#  }
-exec { 'Install Flask 2.1.0':
-  command => '/usr/bin/pip3 install Flask==2.1.0',
-  onlyif  => '/usr/bin/pip3 show Flask >/dev/null || true',
+# Install Flask
+package { 'flask==2.1.0':
+  ensure   => present,
+  provider => pip,
   }
 
