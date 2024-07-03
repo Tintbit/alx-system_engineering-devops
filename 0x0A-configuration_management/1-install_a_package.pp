@@ -1,7 +1,7 @@
 # this manifest file used to get flask via pip3
 #
 package { 'python':
-  ensure   => 'python3.8.10',
+  ensure   => '3.8.10',
   provider => 'pip3',
   }
 
@@ -12,7 +12,7 @@ package { 'flask':
   }
 
 package { 'Werkzeug':
-  ensure   => 'Werkzeug 2.1.1',
+  ensure   => '2.1.1',
   provider => 'pip3',
   require  => Package['flask']
   }
