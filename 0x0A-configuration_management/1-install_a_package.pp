@@ -1,3 +1,4 @@
+#!/usr/bin/pup
 # this manifest file used to get flask via pip3
 #
 #package { 'python':
