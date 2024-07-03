@@ -2,7 +2,8 @@
 #
 ## ps aux: Lists all current processes.
 ## grep -q killmenow: Searches for the string killmenow quietly (without output). Returns 0 if found, indicating success.
-## then /usr/bin/pkill killmenow; fi: Executes /usr/bin/pkill killmenow to kill the process if it exists. The fi ends the conditional statement.
+## then /usr/bin/pkill killmenow; fi: Executes /usr/bin/pkill killmenow to kill the process if it exists. 
+#The fi ends the conditional statement.
 
 #exec { 'check_and_kill_killmenow':
 #  command     => 'if ps aux | grep -q killmenow; then /usr/bin/pkill killmenow; fi',
