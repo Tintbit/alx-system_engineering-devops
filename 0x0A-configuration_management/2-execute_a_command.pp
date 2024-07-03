@@ -5,10 +5,10 @@
 ## then /usr/bin/pkill killmenow; fi: Executes /usr/bin/pkill killmenow to kill the process if it exists. 
 #The fi ends the conditional statement.
 
-exec { 'check_and_kill_killmenow':
-  command     => 'if ps aux | grep -q killmenow; then /usr/bin/pkill killmenow; fi',
-  refreshonly => true,
-}
+#exec { 'check_and_kill_killmenow':
+#  command     => 'if ps aux | grep -q killmenow; then /usr/bin/pkill killmenow; fi',
+#  refreshonly => true,
+#}
 
 
 # uses the exec resource to run the pkill command, targeting processes named killmenow. 
@@ -19,4 +19,9 @@ exec { 'check_and_kill_killmenow':
 #  command     => '/usr/bin/pkill killmenow',
 #  refreshonly => true,
 #}
+
+exec { 'Kill process named killmenow':
+  command => '/usr/bin/pkill killmenow',
+  onlyif  => '/bin/pgrep killmenow > /dev/null',
+  }
 
