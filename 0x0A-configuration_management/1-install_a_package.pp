@@ -4,24 +4,16 @@
 ##  provider => 'pip3',
 ##  }
 
-#class { 'python':
-#  ensure => present,
-#  }
-#
-#package { 'python3-pip':
-#  ensure  => present,
-#  require => Class['python'],
-#  }
-#
-## Ensure pip3 is available
-#exec { 'Ensure pip3 is available':
-#  command => '/usr/bin/python3 -m ensurepip',
-#  unless  => '/usr/local/bin/pip3 --version',
-#  }
-#
-# Install Flask
-package { 'flask==2.1.0':
-  ensure   => present,
-  provider => pip,
+# Install python3-pip package which provides pip3
+package { 'python3-pip':
+  ensure => present,
   }
 
+# Use the pip3 module to install Flask version 2.1.0
+class { 'pip3':
+  ensure_packages => true,
+  }
+
+pip3::package { 'Flask==2.1.0':
+  ensure   => present,
+  }
